@@ -1,0 +1,44 @@
+// USE IT ON YOUR OWN RISK.
+// Function : Auto Upgrade and Auto Clicker ( Can change the value )
+// Made For Stimulation Clicker
+
+(function() {
+    console.log("Auto Clicker and Auto Upgrader started!");
+
+      // CHANGE
+    const clickInterval = 20; // 1 = 1ms ( lower u go faster it goes! )
+    const upgradeInterval = 1000; // Checks upgrades every second. 1000ms = 1s ( lower u go faster it goes! )
+
+  // CHANGE ONLY IF U KNOW WHAT ARE YOU DOING 
+    function autoClick() {
+        const mainButton = document.querySelector(".main-btn"); // Update selector if necessary
+        if (mainButton) {
+            mainButton.click();
+        }
+    }
+
+    
+    function autoUpgrade() {
+        const upgrades = document.querySelectorAll(".upgrade"); // Update selector if necessary
+        upgrades.forEach((upgrade) => {
+            if (!upgrade.classList.contains("disabled")) {
+                upgrade.click();
+            }
+        });
+    }
+
+    
+    const clicker = setInterval(autoClick, clickInterval);
+
+    
+    const upgrader = setInterval(autoUpgrade, upgradeInterval);
+
+   
+    window.stopAutomation = function() {
+        clearInterval(clicker);
+        clearInterval(upgrader);
+        console.log("Auto Clicker and Auto Upgrader stopped!");
+    };
+
+    console.log("You can stop me by typing (stopAutomation) in the console.");
+})();
