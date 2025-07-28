@@ -5,7 +5,7 @@
     console.log("🚀 Auto Clicker started!");
 
     // === CONFIGURABLE SETTING ===
-    const clickInterval = 1; // Adjust interval as needed
+    const clickInterval = 10; // Adjust interval as needed
 
     // === MAIN CLICK FUNCTION ===
     function autoClick() {
