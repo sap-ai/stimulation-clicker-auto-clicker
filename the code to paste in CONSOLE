@@ -1,31 +1,31 @@
-// USE IT ON YOUR OWN RISK.
-// Function : Auto Upgrade and Auto Clicker ( Can change the value )
-// Made For Stimulation Clicker
+// ⚠️ USE AT YOUR OWN RISK
+// Auto Clicker for Simulation Clicker-type games
 
-(function() {
-    console.log("Auto Clicker and Auto Upgrader started!");
+(function () {
+    console.log("🚀 Auto Clicker started!");
 
-      // CHANGE
-    const clickInterval = 60000; // 60000 = 1ms ( lower u go faster it goes! )
+    // === CONFIGURABLE SETTING ===
+    const clickInterval = 10; // Lower = faster clicking (e.g., 10ms)
 
-  // CHANGE ONLY IF U KNOW WHAT ARE YOU DOING 
+    // === MAIN CLICK FUNCTION ===
     function autoClick() {
-        const mainButton = document.querySelector(".data-v-324f9ad2"); // Update selector if necessary
-        if (mainButton) {
-            mainButton.click();
+        const clickButton = document.querySelector(".data-v-324f9ad2"); // <-- Update this selector if needed
+        if (clickButton) {
+            clickButton.click();
+        } else {
+            console.warn("⚠️ Click button not found.");
         }
     }
 
-
-    
     const clicker = setInterval(autoClick, clickInterval);
 
-   
-    window.stopAutomation = function() {
+    // === STOP FUNCTION ===
+    window.stopAutomation = function () {
         clearInterval(clicker);
-        clearInterval(upgrader);
-        console.log("Auto Clicker and Auto Upgrader stopped!");
+        console.log("🛑 Auto Clicker stopped.");
     };
 
-    console.log("You can stop me by typing (stopAutomation) in the console.");
+    console.log("✅ Running! To stop, type: stopAutomation()");
+})();
+
 })();
