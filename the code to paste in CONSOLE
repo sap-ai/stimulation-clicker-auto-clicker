@@ -20,9 +20,6 @@
     
     const clicker = setInterval(autoClick, clickInterval);
 
-    
-    const upgrader = setInterval(autoUpgrade, upgradeInterval);
-
    
     window.stopAutomation = function() {
         clearInterval(clicker);
