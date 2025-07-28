@@ -33,5 +33,3 @@
 
     console.log("✅ Running! To stop, type: stopAutomation()");
 })();
-
-})();
