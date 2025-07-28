@@ -1,20 +1,22 @@
 // ⚠️ USE AT YOUR OWN RISK
-// Auto Clicker for Simulation Clicker-type games
+// Auto Clicker for buttons containing the text "Yes"
 
 (function () {
     console.log("🚀 Auto Clicker started!");
 
     // === CONFIGURABLE SETTING ===
-    const clickInterval = 10; // Lower = faster clicking (e.g., 10ms)
+    const clickInterval = 100; // Adjust interval as needed
 
     // === MAIN CLICK FUNCTION ===
     function autoClick() {
-        const clickButton = document.querySelector(".data-v-324f9ad2"); // <-- Update this selector if needed
-        if (clickButton) {
-            clickButton.click();
-        } else {
-            console.warn("⚠️ Click button not found.");
-        }
+        const buttons = document.querySelectorAll("button");
+
+        buttons.forEach(button => {
+            if (button.textContent.trim().toLowerCase() === "yes") {
+                button.click();
+                console.log("✔️ Clicked a 'Yes' button!");
+            }
+        });
     }
 
     const clicker = setInterval(autoClick, clickInterval);
@@ -24,6 +26,10 @@
         clearInterval(clicker);
         console.log("🛑 Auto Clicker stopped.");
     };
+
+    console.log("✅ Running! To stop, type: stopAutomation()");
+})();
+
 
     console.log("✅ Running! To stop, type: stopAutomation()");
 })();
