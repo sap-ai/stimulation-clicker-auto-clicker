@@ -29,7 +29,3 @@
 
     console.log("✅ Running! To stop, type: stopAutomation()");
 })();
-
-
-    console.log("✅ Running! To stop, type: stopAutomation()");
-})();
