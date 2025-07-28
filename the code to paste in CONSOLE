@@ -6,7 +6,7 @@
     console.log("Auto Clicker and Auto Upgrader started!");
 
       // CHANGE
-    const clickInterval = 20; // 60000 = 1ms ( lower u go faster it goes! )
+    const clickInterval = 60000; // 60000 = 1ms ( lower u go faster it goes! )
 
   // CHANGE ONLY IF U KNOW WHAT ARE YOU DOING 
     function autoClick() {
