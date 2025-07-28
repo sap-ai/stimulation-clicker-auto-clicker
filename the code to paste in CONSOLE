@@ -10,7 +10,7 @@
 
   // CHANGE ONLY IF U KNOW WHAT ARE YOU DOING 
     function autoClick() {
-        const mainButton = document.querySelector(".main-btn"); // Update selector if necessary
+        const mainButton = document.querySelector(".data-v-324f9ad2"); // Update selector if necessary
         if (mainButton) {
             mainButton.click();
         }
